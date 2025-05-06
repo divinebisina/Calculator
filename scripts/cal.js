@@ -13,6 +13,14 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+//Updated the text to display most recent input
+
+const calcu = document.querySelector('.calcu');
+function updateCalcu(value) {
+  calcu.textContent = value;
+  calcu.scrollLeft = calcu.scrollWidth;
+}
+
 function errorTest(newCal) {
   cal = newCal;
 
@@ -56,16 +64,6 @@ function removeBorder() {
       theLast.classList.remove('border');
     }
 }
-
-//Updated the text to display most recent input
-
-const calcu = document.querySelector('.calcu');
-function updateCalcu(value) {
-  calcu.textContent = value;
-  calcu.scrollLeft = calcu.scrollWidth;
-}
-
-
 
 function keyPress() {
   calcu.scrollLeft = calcu.scrollWidth;

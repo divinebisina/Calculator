@@ -94,7 +94,7 @@ button:active {
 }
 
 .calcu::-webkit-scrollbar {
-  height: 6px;
+  height: 3.5px;
 }
 .calcu::-webkit-scrollbar-track {
   background-color: rgb(63, 63, 63);

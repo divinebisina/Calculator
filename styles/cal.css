@@ -4,6 +4,10 @@ body {
   justify-content: center;
 }
 
+.first-part {
+  padding-top: 30px;
+}
+
 .light-mode {
   background-color: white;
 

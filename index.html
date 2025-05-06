@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/cal.css" rel="stylesheet">
+    <title>CalEl</title>
+  </head>
+  <body class="js-first-part first-part" onkeydown="
+    keyPress();
+    errorTest(cal);
+  ">
+    <div class="grid">
+      <div class="calcu js-cal"></div>
+      <p>
+        <button class="orange" onclick="
+        errorTest(cal += '(');
+        updateCalcu(cal);
+        console.log(cal);
+        ">
+          (
+        </button>
+        <button class="orange" onclick="
+        errorTest(cal += ')');
+        updateCalcu(cal);
+        console.log(cal);
+        ">
+          )
+        </button>
+        <button class="orange root" onclick="
+        errorTest(cal += '**2');
+        updateCalcu(cal);
+        console.log(cal);
+        ">
+          x<span>2</span>
+        </button>
+        <button class="orange" onclick="
+        errorTest(cal += '**0.5');
+        updateCalcu('**0.5');
+        console.log(cal);
+        ">
+          &radic;
+        </button>
+      </p>
+      <p>
+        <button onclick="
+          console.log(cal);
+          errorTest(cal += '1');
+          updateCalcu(cal);
+        ">
+          1
+        </button>
+        <button onclick="
+        console.log(cal);
+        errorTest(cal += '2');
+        updateCalcu(cal);
+        ">
+          2
+        </button>
+        <button onclick="
+        console.log(cal);
+        errorTest(cal += '3');
+        updateCalcu(cal);
+        ">
+          3
+        </button>
+        <button class="orange" onclick="
+        console.log(cal);
+        errorTest(cal += ' + ');
+        updateCalcu(cal);
+        ">
+          +
+        </button>
+      </p>
+      <p>
+        <button onclick="
+        console.log(cal);
+        errorTest(cal += '4');
+        updateCalcu(cal);
+        ">
+          4
+        </button>
+        <button onclick="
+        console.log(cal);
+        errorTest(cal += '5');
+        updateCalcu(cal);
+        ">
+          5
+        </button>
+        <button onclick="
+        console.log(cal);
+        errorTest(cal += '6');
+        updateCalcu(cal);
+        ">
+          6
+        </button>
+        <button class="orange" onclick="
+        console.log(cal);
+        errorTest(cal += ' - ');
+        updateCalcu(cal);
+        ">
+          -
+        </button>
+      </p>
+      <p>
+        <button onclick="
+        console.log(cal);
+        errorTest(cal += '7');
+        updateCalcu(cal);
+        ">
+          7
+        </button>
+        <button onclick="
+        console.log(cal);
+        errorTest(cal += '8');
+        updateCalcu(cal);
+        ">
+          8
+        </button>
+        <button onclick="
+        console.log(cal);
+        errorTest(cal += '9');
+        updateCalcu(cal);
+        ">
+          9
+        </button>
+        <button class="orange" onclick="
+        console.log(cal);
+        errorTest(cal += ' * ');
+        updateCalcu(cal);
+        ">
+          *
+        </button>
+      </p>
+      <p>
+        <button onclick="
+        console.log(cal);
+        errorTest(cal += '0');
+        updateCalcu(cal);
+        ">
+          0
+        </button>
+        <button onclick="
+        console.log(cal);
+        errorTest(cal += '00');
+        updateCalcu(cal);
+        ">
+          00
+        </button>
+        <button onclick="
+        console.log(cal);
+        errorTest(cal += '.');
+        updateCalcu(cal);
+        ">
+          .
+        </button>
+        <button class="orange" onclick="
+        console.log(cal);
+        errorTest(cal += ' / ');
+        updateCalcu(cal);
+        ">
+          /
+        </button>
+      </p>
+      <div class="last">
+        <button onclick="
+        errorTest(cal = '');
+        updateCalcu(cal);
+        console.log(cal);
+        ">
+          Clear
+        </button>
+        <button onclick="
+        errorTest(cal.slice(0, -1));
+        updateCalcu(cal.slice(0, -1));
+        console.log(cal);
+        ">
+          Del
+        </button>
+        <button onclick="
+        let result;
+        try {
+          result = eval(cal);
+        } catch (e) {
+          result = 'Error';
+        }
+        errorTest(result);
+        updateCalcu(result);
+        console.log(cal);
+        ">
+          =
+        </button>
+        
+        <a href="settings.html">
+          <button class="settings">
+            <img src="file_00000000f1b861f788c208e65cbf77ff (1).png" class="image">
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <script src="scripts/cal.js"></script>
+  </body>
+</html>

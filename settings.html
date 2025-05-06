@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/cal.css" rel="stylesheet">
+    <title>Settings</title>
+  </head>
+  <body class="js-first-part first-part">
+    <div class="settings-display">
+      <div class="first-layer">
+        <div class="words">Select Theme</div>
+  
+        <div class="button-display">
+          <button class="js-theme border1 theme" onclick="
+          changeTheme('Light');
+          addBorder('.border1');
+        ">
+          Light Mode
+        </button>
+  
+        <button class="js-theme border2 theme" onclick="
+          changeTheme('Dark');
+          addBorder('.border2');
+        ">
+          Dark Mode
+        </div>
+        </button>
+      </div>
+      <div>
+        <a href="index.html">
+          <button class="home-button">Return Home</button>
+        </a>
+      </div>
+    </div>
+    
+    <script src="scripts/cal.js"></script>
+  </body>
+</html>
